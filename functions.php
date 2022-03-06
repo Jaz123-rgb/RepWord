@@ -65,10 +65,14 @@ add_action("after_setup_theme", "plz_add_menus");
 function plz_add_sidebar(){
     register_sidebar(
        array(
-          "name" => "Pie de pagina",
-          "id" => 'pie-pagina',
+          'name' => 'Pie de pagina',
+          'id' => 'pie-pagina',
+          'before_widget' => '',
+          'after_widget' => ''
           
        )
     );
 
 }
+
+add_action('widgets_init','plz_add_sidebar');
